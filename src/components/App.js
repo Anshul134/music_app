@@ -35,7 +35,7 @@ class App extends Component {
                         <StreamSong songObj={this.state.musicPreviews.filter( (music) => 
                             music.songId == match.params.id
                         
-                        )}/>
+                        )}  songArr = {this.state.musicPreviews}/>
                         } />
                     
                 </div>

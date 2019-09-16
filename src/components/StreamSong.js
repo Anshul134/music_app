@@ -15,6 +15,12 @@ import Similar from './Similar';
 class StreamSong extends Component {
     render() {
         const song = this.props.songObj[0];
+        let songArr = this.props.songArr;
+     
+        songArr = songArr.filter( (music) => 
+            music.songId != song.songId
+        );
+    
         const {songId, name, artist, album, clipArt} = song;
         return (
             
@@ -23,8 +29,8 @@ class StreamSong extends Component {
                     <div className='stream-header-wrap'>
                         <StreamHead songObj = {song} />
                          <AboutSong songObj = {song} />
-                        {/*<Similar songsArr = {song} />
-                        <Player songObj = {song} /> */}
+                         <Similar songsArr = {songArr} />
+                           {/*<Player songObj = {song} /> */}
                     </div>
                 </div>
             </div>

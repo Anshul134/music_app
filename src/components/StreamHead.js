@@ -30,7 +30,7 @@ class StreamHead extends Component {
                            
                             <div className='stream-head-bg' style={this.state.style}>
                                 <div className='col-md-3 col-sm-12'>
-                                    <img className='img img-responsive stream-clipArt' src={`/assets/img/songs/${clipArt}`}  height = '180'/>
+                                    <img className='img img-responsive stream-clipArt' src={`/assets/img/songs/${clipArt}`}/>
                                 </div>
                                 <div className='page-title col-md-4 col-sm-12'>
                                     <p className='page-title-name'>{name}</p>
