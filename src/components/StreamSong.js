@@ -28,9 +28,9 @@ class StreamSong extends Component {
                 <div className='streamSong-wrap'>
                     <div className='stream-header-wrap'>
                         <StreamHead songObj = {song} />
-                         <AboutSong songObj = {song} />
-                         <Similar songsArr = {songArr} />
-                           {/*<Player songObj = {song} /> */}
+                        <AboutSong songObj = {song} />
+                        <Similar songsArr = {songArr} />
+                        <Player songObj = {song} />
                     </div>
                 </div>
             </div>

@@ -143,3 +143,13 @@
     font-weight: 400;
     color:#444444;
 }
+.music-player-wrap {
+    position: fixed;
+    bottom: 0;
+    z-index: +10000;
+    background: blue;
+}
+.audio-player {
+    width:100%;
+
+}

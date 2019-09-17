@@ -14,13 +14,13 @@ import StreamSong from './StreamSong';
 class App extends Component {
     state = {
         musicPreviews : [
-            {'songId':1,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow'},
-            {'songId':2,'name': 'Mini Cooper', 'artist': 'Ammy Virk, Diljeet Dosanjh', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic'},
-            {'songId':3,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow'},
-            {'songId':4,'name': 'Mini Cooper', 'artist': 'Ammy Virk', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic'},
-            {'songId':5,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow'},
-            {'songId':6,'name': 'Mini Cooper', 'artist': 'Ammy Virk', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic'},
-            {'songId':7,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow'},       
+            {'songId':1,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow', 'path': 'mad_world_gary_jules.mp3'},
+            {'songId':2,'name': 'Mini Cooper', 'artist': 'Ammy Virk, Diljeet Dosanjh', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic', 'path': 'Mini Cooper Ammy Virk.mp3'},
+            {'songId':3,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow', 'path': 'mad_world_gary_jules.mp3'},
+            {'songId':4,'name': 'Mini Cooper', 'artist': 'Ammy Virk', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic', 'path': 'Mini Cooper Ammy Virk.mp3'},
+            {'songId':5,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow', 'path': 'mad_world_gary_jules.mp3'},
+            {'songId':6,'name': 'Mini Cooper', 'artist': 'Ammy Virk', 'album': 'Nikka Zildar', 'clipArt': 'mini_cooper.jpeg', 'mood' : 'romantic', 'path': 'Mini Cooper Ammy Virk.mp3'},
+            {'songId':7,'name': 'Mad World', 'artist': 'Gary Jules', 'album': 'Dony Darko', 'clipArt': 'mad_world.jpg', 'mood' : 'mellow', 'path': 'mad_world_gary_jules.mp3'},       
         ]
     }
     render() {
@@ -36,8 +36,8 @@ class App extends Component {
                             music.songId == match.params.id
                         
                         )}  songArr = {this.state.musicPreviews}/>
-                        } />
-                    
+                    } />
+                  
                 </div>
             </Router>                
         );
