@@ -16,7 +16,7 @@ class StreamSong extends Component {
     render() {
         const song = this.props.songObj[0];
         let songArr = this.props.songArr;
-     
+       
         songArr = songArr.filter( (music) => 
             music.songId != song.songId
         );

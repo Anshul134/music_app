@@ -17,7 +17,7 @@ class StreamHead extends Component {
         }
     }
     componentDidMount() {
-        this.changeStyle(this.props.songObj.mood)
+        //this.changeStyle(this.props.songObj.mood)
     }
     render() {
         const {songId, name, artist, album, clipArt, mood} = this.props.songObj;
@@ -28,7 +28,7 @@ class StreamHead extends Component {
                     <div className='row'>
                         <div className='col-md-12'>
                            
-                            <div className='stream-head-bg' style={this.state.style}>
+                            <div className='stream-head-bg' style={{background: (mood=== 'mellow')?'#31311a7a':'#045c7dc2'}}>
                                 <div className='col-md-3 col-sm-12'>
                                     <img className='img img-responsive stream-clipArt' src={`/assets/img/songs/${clipArt}`}/>
                                 </div>

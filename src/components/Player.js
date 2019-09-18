@@ -5,18 +5,32 @@ class Player extends Component {
         let audio = document.createElement('AUDIO');
         audio.src = `/assets/songs/${path}`;
         audio.setAttribute('type', 'audio/mpeg');
-        document.getElementById('audioWrap').append(audio);
+        
+        if(document.getElementById('audioWrap').hasChildNodes()) {
+            document.getElementById('audioWrap').replaceChild(audio, document.getElementById('audioWrap').childNodes[0])
+        }
+        else
+            document.getElementById('audioWrap').append(audio);
+            console.log("Yeesssss");
         audio.setAttribute('controls', true);
+        audio.setAttribute('id', 'audio-player');
         audio.classList.add('audio-player');
         audio.play();
     }
     componentDidMount() {
-        console.log(">>>>",this.props.songObj);
+        const {name, album, artist, clipArt, songId} = this.props.songObj;
+        
+        let audioWrap =  document.getElementById('audioWrap');
+        
+        this.renderPlayer(this.props.songObj)
+    }
+    componentWillUpdate() {
         const {name, album, artist, clipArt, songId} = this.props.songObj;
         this.renderPlayer(this.props.songObj)
     }
     render() {
         const {name, album, artist, clipArt, songId} = this.props.songObj;
+        
         return(
             <div className='music-player-wrap col-md-12'>
                 <div className='container'>

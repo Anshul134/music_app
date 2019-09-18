@@ -32,10 +32,11 @@ class App extends Component {
                         <Home pageHead='Music App' musicPreviews ={this.state.musicPreviews}/>
                     } />
                     <Route path='/streamMusic/:id'   render = {({match}) => 
-                        <StreamSong songObj={this.state.musicPreviews.filter( (music) => 
-                            music.songId == match.params.id
+                        <StreamSong songObj={this.state.musicPreviews.filter( (music) => {
+                            console.log(match.params.id)
+                            return music.songId == match.params.id
                         
-                        )}  songArr = {this.state.musicPreviews}/>
+                        })}  songArr = {this.state.musicPreviews}/>
                     } />
                   
                 </div>
