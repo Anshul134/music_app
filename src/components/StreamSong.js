@@ -13,12 +13,13 @@ import Player from './Player';
 import Similar from './Similar';
 
 class StreamSong extends Component {
+    
     render() {
         const song = this.props.songObj[0];
         let songArr = this.props.songArr;
        
         songArr = songArr.filter( (music) => 
-            music.songId != song.songId
+            music._id != song._id
         );
     
         const {songId, name, artist, album, clipArt} = song;

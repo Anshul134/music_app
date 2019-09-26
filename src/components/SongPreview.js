@@ -5,13 +5,13 @@ import {Link} from 'react-router-dom';
 
 class SongPreview extends Component {
     render() {
-        const {name, album, artist, clipArt, songId} = this.props.songObj;
+        const {name, album, artist, clipArt, _id} = this.props.songObj;
         return(
             <div className='col-md-3 song-preview'>
                 <div className=''>
 					
                     <div className='song-preview-card' >
-												<Link to={`/streamMusic/${songId}`} >
+												<Link to={`/streamMusic/${_id}`} >
 													<div className='clip-art'>
 															<img src = {`/assets/img/songs/${clipArt}`} className='song-preview-clipart' height='180'/>
 													</div>

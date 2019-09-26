@@ -11,7 +11,7 @@ class Similar extends Component {
                 </div>
                 <div className='similar-song-overview '>
                     {songsArr.map( (song) => 
-                        <SimilarPreview song ={song} key= {song.songId} />    
+                        <SimilarPreview song ={song} key= {song._id} />    
                     )}
                     
                 </div>

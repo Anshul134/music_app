@@ -3,7 +3,7 @@ const app = express();
 //import sassMiddleware from 'node-sass-middleware';
 import path from 'path';
 
-import apiRoutes from './apis';
+import apiRoutes from './apis/routes/routes';
 
 require('dotenv').config();
 
@@ -14,7 +14,8 @@ require('dotenv').config();
 
 app.use(express.static('./public'));
 
-
+//db connection pool
+import db from './apis/db/config';
 
 app.set('view engine', 'ejs');
 app.use('/api', apiRoutes);
